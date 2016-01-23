@@ -1,0 +1,15 @@
+<div class="login">
+  <div class="container">
+    <div class="form">
+<!-- In the login form, we use form_for(:session, url: login_path) do |f|. This refers to the name of the resource and corresponding URL. In the signup form, we used form_for(@user) do |f| since we had a User model. For the login form, we don't have a Session model, so we refer to the parameters above. -->
+      <h1>Log in</h1>
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.email_field :email, :placeholder => "Email" %>
+        <%= f.password_field :password, :placeholder => "Password" %>
+        <%= f.submit "Log in", class: "btn-submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- When you visit the URL /login, the browser makes a GET request for the URL. This request hits the Sessions controller's new action, which returns a view displaying the login page.

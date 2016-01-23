@@ -1,0 +1,25 @@
+<h1>Listing Used Cars</h1>
+
+<table>
+  <tr>
+    <th>Used Cars</th>
+    <th>List</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @used_cars.each do |used_car| %>
+  <tr>
+    <td><%= used_car.title %></td>
+    <td><%= used_car.content %></td>
+    <td><%= link_to "Show", used_car %></td>
+    <td><%= link_to "Edit", edit_used_car_path(used_car) %></td>
+    <td><%= link_to "Remove", used_car, method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to "New used_car", new_used_car_path %>
