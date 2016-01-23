@@ -9,6 +9,10 @@ gem 'unicorn-rails'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'versionist'
 gem 'kaminari'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'bcrypt', '~> 3.1.7'
+
 
 group :development do
   gem 'spring'
